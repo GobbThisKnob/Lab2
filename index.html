@@ -21,11 +21,6 @@
       <div class="jumbotron">
       <h2>CS498: IoT -- Lab 2</h2>
 
-      <!-- <video class="center" width="600" height="400" controls>
-        <source src="samplevid.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-      </video> -->
-      <!-- <img src="./media/default_background.png" id='pics'> -->
       <img id="video-feed" style="width: 100%; max-width: 800px;">
     </div> 
   
@@ -46,20 +41,17 @@
         </div>
 
         <div class="jumbotron text-left col-md-6">
-        <input id="message" type="text" placeholder="message to Pi"/>
-        <button class="btn btn-success" onclick="update_data()">Sumbit</button>
+        <!-- <input id="message" type="text" placeholder="message to Pi"/>
+        <button class="btn btn-success" onclick="update_data()">Sumbit</button> -->
           <p>
             <span id="direction_dot" style="color:Green">&bull;</span> Car Direction: <span id="direction"> </span>
-           <br>
-           <span id="speed_dot" style="color:green">&bull;</span> Speed: <span id="speed">0.0</span>  
-           <br>
-           <span id="distance_dot" style="color:green">&bull;</span> Distance Traveled: <span id="distance">0.0</span>
            <br>
            <span id="temprature_dot" style="color:green">&bull;</span> Temperature of the Pi: <span id="temperature">0.0</span>
            <br>
            <span id="temprature_dot" style="color:green">&bull;</span> Ultrasonic Distance: <span id="ultrasonic">0.0</span>
            <br>
-           Bluetooth return value: <span id="bluetooth"> </span>
+           <span id="temprature_dot" style="color:green">&bull;</span> Battery Voltage <span id="battery">0.0 V</span>
+           <br>
           </p>  
         </div>
     </div>

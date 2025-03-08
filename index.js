@@ -20,11 +20,6 @@ function get_data()
     client.on('data', (data) => {
         response = JSON.parse(data.toString());
         document.getElementById("direction").innerHTML = response.direction;
-        document.getElementById("speed").innerHTML = response.speed;
-        document.getElementById("distance").innerHTML = response.distance + " cm";
-        // document.getElementById("temperature").innerHTML = response.temperature;
-        // document.getElementById("ultrasonic").innerHTML = response.ultrasonic + " cm";
-        // document.getElementById("bluetooth").innerHTML = response.data;
         client.end();
         client.destroy();
     });
@@ -67,13 +62,6 @@ function resetKey(e) {
     document.getElementById("rightArrow").style.color = "grey";
 }
 
-// update data for every 50ms
-function update_data(){
-    setInterval(function(){
-        // client();
-    }, 50);
-}
-
 function startVideoStream() {
     const net = require('net');
     const HOST = '10.16.1.102'; 
@@ -113,13 +101,12 @@ function startVideoStream() {
     });
   
     client.on('error', (err) => {
-        console.error('Stream error:', err);
+        console.error('Video error:', err);
         // startVideoStream();
     });
 }
 
 // Start the video stream when the document is ready
 document.addEventListener('DOMContentLoaded', (event) => {
-    console.log("[Index] Document is ready, starting video stream");
     startVideoStream();
 });
