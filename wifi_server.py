@@ -5,9 +5,7 @@ import io
 import struct
 import threading
 from Motor import *
-from Ultrasonic import *
 from servo import *
-# from ADC import *
 from picamera2 import Picamera2,Preview
 from picamera2.encoders import JpegEncoder
 from picamera2.outputs import FileOutput
@@ -22,7 +20,6 @@ CAM_PORT = 60000
 
 
 motors = Motor()
-ultra = Ultrasonic()
 servo = Servo()
 servo.setServoPwm('0', 95)
 # adc=Adc()

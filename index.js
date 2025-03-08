@@ -12,16 +12,14 @@ const client = net.createConnection({ port: server_port, host: server_addr }, ()
 
 
 function get_data()
-{
-    var input = document.getElementById("message").value;
-    client.write(input);
-    
+{    
     // get the data from the server
     client.on('data', (data) => {
+        console.log(data.toString());
         response = JSON.parse(data.toString());
         document.getElementById("direction").innerHTML = response.direction;
-        client.end();
-        client.destroy();
+        // client.end();
+        // client.destroy();
     });
 
     client.on('end', () => {

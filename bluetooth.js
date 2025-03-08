@@ -3,7 +3,7 @@ let {PythonShell} = require('python-shell')
 
 let options = {
   mode: 'json',
-  pythonOptions: ['-u']
+  pythonOptions: ['-u'], // get print results in real-time
 };
 
 console.log("Starting bluetooth client");
